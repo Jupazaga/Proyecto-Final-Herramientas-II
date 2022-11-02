@@ -1,3 +1,4 @@
+using Microsoft.Data.SqlClient;
 namespace Login
 {
     public partial class frmInicio : Form
@@ -6,16 +7,30 @@ namespace Login
         {
             InitializeComponent();
         }
-        SqlConnection conexion = new SqlConnection("server=DESKTOP-D481L0S\\SQLEXPRESS; database=DB_Biblioteca2019; integrated security =true");
-
-        private void btnValidar_Click(object sender, EventArgs e)
+        private void login()
         {
+            SqlConnection conexion = new SqlConnection("server=DESKTOP-D481L0S\\SQLEXPRESS; database=DB_Biblioteca2019; integrated security =true");
             conexion.Open();
-            string consulta = $"select ";
-            SqlCommand sqlCommand = new SqlCommand(consulta, conexion);
-            sqlCommand.ExecuteNonQuery();
-            MessageBox.Show("Consulta hecha");
-            conexion.Close();
+            SqlCommand cm = new SqlCommand("select Nom_Usu, contraseña from usuario where Nom_Usu  ='" + txtusuario.Text + "' and contraseña'" + txtcontrasena.Text + "'", conexion);
+            SqlDataReader rdr = cm.ExecuteReader();
+            if (rdr.Read())
+            {
+                MessageBox.Show("Login Exitoso", "Sistema");
+                // si la credencial es correcta abre el formulario de menu
+            } 
+            else
+            {
+                MessageBox.Show("Login Incorrecto", "Sistema");
+
+            }
+
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            login();
         }
     }
+
+        
 }
