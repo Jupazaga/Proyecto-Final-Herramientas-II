@@ -1,6 +1,6 @@
 ﻿namespace Login
 {
-    partial class frmInicio
+    partial class FrmLogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtusuario = new System.Windows.Forms.TextBox();
-            this.txtcontrasena = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtusuario
+            // txtUsuario
             // 
-            this.txtusuario.Location = new System.Drawing.Point(351, 64);
-            this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(100, 23);
-            this.txtusuario.TabIndex = 0;
+            this.txtUsuario.Location = new System.Drawing.Point(351, 64);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(100, 23);
+            this.txtUsuario.TabIndex = 0;
             // 
-            // txtcontrasena
+            // txtContrasena
             // 
-            this.txtcontrasena.Location = new System.Drawing.Point(351, 137);
-            this.txtcontrasena.Name = "txtcontrasena";
-            this.txtcontrasena.Size = new System.Drawing.Size(100, 23);
-            this.txtcontrasena.TabIndex = 1;
+            this.txtContrasena.Location = new System.Drawing.Point(351, 137);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(100, 23);
+            this.txtContrasena.TabIndex = 1;
             // 
             // btnIngresar
             // 
@@ -55,7 +55,7 @@
             this.btnIngresar.TabIndex = 2;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.btnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
             // 
             // frmInicio
             // 
@@ -63,8 +63,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.txtcontrasena);
-            this.Controls.Add(this.txtusuario);
+            this.Controls.Add(this.txtContrasena);
+            this.Controls.Add(this.txtUsuario);
             this.Name = "frmInicio";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -74,9 +74,9 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox txtusuario;
-        private TextBox txtcontrasena;
+        
+        private TextBox txtUsuario;
+        private TextBox txtContrasena;
         private Button btnIngresar;
     }
 }
