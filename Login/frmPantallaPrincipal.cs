@@ -23,5 +23,12 @@ namespace Login
             ventanaImportar.Show();
             this.Hide();
         }
+
+        private void btnCRUD_Click(object sender, EventArgs e)
+        {
+            frmCRUD ventanaCRUD = new frmCRUD();
+            ventanaCRUD.Show();
+            this.Hide();
+        }
     }
 }

@@ -33,7 +33,7 @@ namespace Login
         {
             try
             {
-                Login(@"localhost\SQLEXPRESS", "DB_Usuario", "tblPersona", "usuario", "contrasena");
+                Login(@"Server=DESKTOP-085JFEA\SQLEXPRESS", "DB_Usuario", "tblPersona", "usuario", "contrasena");
 
             }catch(Exception error)
             {

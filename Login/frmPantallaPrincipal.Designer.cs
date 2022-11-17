@@ -50,6 +50,7 @@
             this.btnCRUD.TabIndex = 1;
             this.btnCRUD.Text = "CRUD";
             this.btnCRUD.UseVisualStyleBackColor = true;
+            this.btnCRUD.Click += new System.EventHandler(this.btnCRUD_Click);
             // 
             // frmPantallaPrincipal
             // 
